@@ -28,8 +28,11 @@ function products(products) {
         </article>
       `;
     }
-
+    
     productsDOM.innerHTML = htmlProduct
+
+
+    
   }
 
   printProducts()
@@ -39,5 +42,4 @@ function products(products) {
     printProducts
   }
 }
-
 export default products;

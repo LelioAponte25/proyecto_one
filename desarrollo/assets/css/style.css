@@ -214,6 +214,11 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+}
+
+.nav__menu {
+  font-size: var(--small-font);
 }
 
 .nav__logo {
@@ -242,7 +247,7 @@ button {
 }
 
 .nav__menu .btn--close {
-  position: absolute;
+  position:absolute;
   top: var(--sp-0-75);
   right: var(--sp-0-75);
   width: var(--sp-2);
@@ -262,6 +267,16 @@ button {
   transition: color .3s ease-in-out;
 }
 
+.nav__list {
+  list-style: none;
+  gap: 20px;
+}
+
+.nav__list a {
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
 .nav__link:hover {
   color: var(--primary-color);
 }
@@ -275,6 +290,11 @@ button {
 .nav__btn i {
   font-size: 1.25rem;
 }
+
+.nav__items {
+  padding: 25px;
+}
+
 
 .btn--cart {
   position: relative;
@@ -600,3 +620,4 @@ button {
     margin: 0 auto;
   }
 }
+
