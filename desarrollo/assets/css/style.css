@@ -99,6 +99,11 @@ body {
   font-weight: var(--font-normal);
   color: var(--text-color);
   background-color: var(--body-color);
+  transition: .3s ease all;
+}
+
+.dark {
+  background: #000;
 }
 
 h1,
@@ -214,11 +219,27 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
+body.dark nav {
+  background: #2222;
+  box-shadow: 10px 10px 20px rgb(0, 0, 0, 16);
+}
+
+body.dark nav a {
+  color: white;
+}
+
+body.dark nav a:hover {
+  color: white;
+}
+
 
 .nav__menu {
   font-size: var(--small-font);
+}
+
+body.dark .nav__menu {
+  background: black;
 }
 
 .nav__logo {
@@ -259,6 +280,8 @@ button {
   align-items: center;
 }
 
+
+
 .nav__link {
   display: flex;
   align-items: center;
@@ -287,6 +310,11 @@ button {
   gap: var(--sp-1);
 }
 
+/*dark mode para buttos*/
+body.dark header{
+  background-color: #000;
+}
+
 .nav__btn i {
   font-size: 1.25rem;
 }
@@ -300,6 +328,23 @@ button {
   position: relative;
 }
 
+body.dark .btn--cart {
+  color: white;
+}
+
+body.dark .btn--menu{
+  color: white;
+}
+
+body.dark .logo--icon {
+  background-color:white;
+  border-radius: 50%;
+  
+}
+
+body.dark h2 {
+  color: white;
+}
 .notify {
   position: absolute;
   top: -5px;
@@ -399,6 +444,21 @@ button {
 .product__stock {
   grid-column: span 2;
   justify-self: flex-end;
+}
+
+body.dark .product__content {
+  background-color: #000;
+  color: white;
+}
+
+body.dark .product__image {
+  background-color: #000;
+  color: white;
+}
+
+body.dark .product__title {
+  background-color: #000;
+  color: white;
 }
 
 .product__title {
@@ -620,4 +680,102 @@ button {
     margin: 0 auto;
   }
 }
+
+/*SWCHIT*/
+
+.switch {
+  background: var(--primary-color);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  
+}
+
+.switch::after {
+  content:"";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right:unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 8px 2px 2px rgb(0,0,0,.2);
+}
+
+.active {
+  background: orange;
+  color: #000;
+}
+
+.active::after {
+  right: 0;
+  left: unset;
+}
+
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: white;
+}
+
+body.dark footer {
+  background-color: black;
+  color: white;
+}
+
+body.dark footer h3 {
+  background-color: black;
+  color: white;
+}
+
+
+body.dark .cart {
+  background: #000;
+}
+
+body.dark .cart h3{
+  color: white;
+}
+
+body.dark .cart i{
+  color: white;
+}
+
+body.dark .cart__count{
+  background: #000;
+  color: white;
+
+}
+
+body.dark .cart__total{
+  background: #000;
+  color: white;
+
+}
+
+body.dark .cart__container div{
+  background-color: #000;
+  color: white;
+}
+
+body.dark .section {
+  background-color: #000;
+}
+
+
+
+
+
+
 

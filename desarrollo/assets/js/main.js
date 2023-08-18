@@ -6,6 +6,12 @@ import showMenu from "./components/showMenu.js";
 import getProducts from "./helpers/getProducts.js";
 import scroll from "./components/scroll.js";
 
+const btnSwitch = document.querySelector('#switch');
+
+btnSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btnSwitch.classList.toggle('active');
+})
 
 /* UI Elements */
 
@@ -26,8 +32,4 @@ const { db, printProducts } = products(await getProducts())
 // Cart 
 cart(db, printProducts)
 
-const darkModeEnabled = localStorage.getItem('darkModeEnabled');
 
-if (darkModeEnabled === 'true') {
-htmlElement.classList.add('dark-mode');
-}
